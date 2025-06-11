@@ -1,0 +1,51 @@
+.about-container {
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  padding-top: 100px;
+}
+
+.animate-left,
+.animate-right {
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.animate-left {
+  transform: translateX(-200px);
+}
+
+.animate-right {
+  transform: translateX(200px);
+}
+
+.animate .animate-left,
+.animate .animate-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-title {
+  font-size: 20px;
+  color: #2e2e2e;
+}
+.unvan {
+  font-size: 18px;
+  color: #4a4a4a;
+}
+.about-content {
+  font-size: 15px;
+  color: #606060;
+}
+.lottie-gif {
+  width: 400px;
+  height: 400px;
+}
+.content-wrapper {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  text-align: left;
+}
