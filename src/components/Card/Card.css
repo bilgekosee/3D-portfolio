@@ -1,0 +1,55 @@
+.skills-card-wrapper {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+.skill-card {
+  position: relative;
+  background-color: black;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 30px;
+  min-width: 250px;
+  min-height: 320px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 1;
+  backdrop-filter: blur(8px);
+  transform-style: preserve-3d;
+}
+
+.stars-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.skill-card h3 {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+.skill-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-card li {
+  margin-bottom: 8px;
+  color: white;
+}
+.skills-title {
+  font-size: 20px;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+}

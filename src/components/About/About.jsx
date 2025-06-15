@@ -18,6 +18,7 @@ const About = () => {
   }, []);
   return (
     <section id="about" ref={ref}>
+      <span className="about-span">About Me</span>
       <div className={`about-container ${inView ? "animate" : ""}`}>
         <Lottie
           animationData={animationData}

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useGLTF } from "@react-three/drei";
+import { Stars, useGLTF } from "@react-three/drei";
 import "./Navbar.css";
 
 function Logo3D() {
@@ -14,9 +14,27 @@ function Logo3D() {
 
   return <primitive object={scene} ref={ref} scale={0.9} />;
 }
+
+function StarBackground() {
+  return (
+    <Canvas camera={{ position: [0, 0, 1] }}>
+      <Stars
+        radius={150}
+        depth={80}
+        count={8000}
+        factor={2}
+        saturation={0}
+        fade
+      ></Stars>
+    </Canvas>
+  );
+}
 const Navbar = () => {
   return (
     <div className="navbar-container">
+      <div className="canvas-background">
+        <StarBackground />
+      </div>
       <div className="navbar-wrapper">
         <div className="model-wrapper">
           <Canvas camera={{ position: [0, 0, 3] }}>
@@ -28,6 +46,7 @@ const Navbar = () => {
         <div className="content">
           <span>About</span>
           <span>Projects</span>
+          <span>Skills</span>
           <span>Contact</span>
         </div>
       </div>

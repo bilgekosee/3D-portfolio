@@ -5,8 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  background: linear-gradient(to bottom, #000000, #1a1a1a, #2c2c2c);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -24,7 +23,6 @@ a:hover {
 
 body {
   margin: 0;
-  background-color: #f3f3f3f3;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;

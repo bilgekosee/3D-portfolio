@@ -4,13 +4,19 @@
   align-items: center;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
+  padding-top: 30px;
+}
+#about {
   padding-top: 100px;
 }
-
+.about-span {
+  color: white;
+  font-size: 24px;
+}
 .animate-left,
 .animate-right {
   opacity: 0;
-  transition: all 0.8s ease;
+  transition: all 0.9s ease;
 }
 
 .animate-left {
@@ -29,15 +35,15 @@
 
 .about-title {
   font-size: 20px;
-  color: #2e2e2e;
+  color: #ffffff;
 }
 .unvan {
   font-size: 18px;
-  color: #4a4a4a;
+  color: #c4c3c3;
 }
 .about-content {
   font-size: 15px;
-  color: #606060;
+  color: #afacac;
 }
 .lottie-gif {
   width: 400px;
