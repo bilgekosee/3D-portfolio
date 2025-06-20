@@ -1,0 +1,109 @@
+.project-title {
+  font-size: 24px;
+  color: #ffffff;
+}
+.project-wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
+  padding: 10px 22px;
+}
+
+.project-card-container {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 500px;
+  background-color: #000000;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 25px;
+}
+.card-img {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.github-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 40px;
+  height: 24px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.github-icons {
+  width: 40px;
+  height: 40px;
+}
+
+.card-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: left;
+  align-self: flex-start;
+}
+
+.card-content {
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: left;
+}
+.card-tags {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.tag {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+}
+
+.tag-react {
+  background-color: #61dafb;
+}
+
+.tag-pixel-art {
+  background-color: #e91e63;
+}
+.tag-mongodb {
+  background-color: #088e49;
+}
+.tag-node {
+  background-color: #1ee969;
+}
+.tag-css {
+  background-color: #bfe60f;
+}
+.tag-api {
+  background-color: #5b5958;
+}
+.tag-tailwind {
+  background-color: #a2287c;
+}

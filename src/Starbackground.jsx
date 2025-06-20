@@ -7,8 +7,8 @@ export default function StarBackground() {
     <Canvas camera={{ position: [0, 0, 1] }}>
       <Stars
         radius={30}
-        depth={50}
-        count={500}
+        depth={60}
+        count={900}
         factor={2}
         saturation={0}
         fade

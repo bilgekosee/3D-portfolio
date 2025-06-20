@@ -30,9 +30,9 @@ const skillGroups = [
 export default function Card() {
   return (
     <section className="skills-section" id="skills">
-      <h2 className="skills-title">Skills</h2>
+      <span className="skills-title">Skills</span>
       <div className="skills-card-wrapper">
-        {skillGroups.map((group) => (
+        {skillGroups.map((group, index) => (
           <motion.div
             key={group.title}
             className="skill-card"
@@ -42,10 +42,10 @@ export default function Card() {
               scale: 1.05,
               transition: { type: "spring", stiffness: 300 },
             }}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6, delay: index * 0.3 }}
           >
             <div className="stars-bg">
               <StarBackground />

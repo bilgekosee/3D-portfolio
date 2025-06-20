@@ -45,8 +45,8 @@ const Navbar = () => {
         </div>
         <div className="content">
           <span>About</span>
-          <span>Projects</span>
           <span>Skills</span>
+          <span>Projects</span>
           <span>Contact</span>
         </div>
       </div>
