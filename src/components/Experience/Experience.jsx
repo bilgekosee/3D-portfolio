@@ -60,31 +60,37 @@ const experienceData = [
 const Experience = () => {
   return (
     <section id="experience" className="experience-section">
-      <div className="timeline">
-        {experienceData.map((item, index) => {
-          const isLeft = index % 2 === 0;
-          return (
-            <div className="timeline-item" key={item.id}>
-              <div className="timeline-icon">{item.icon}</div>
-              <motion.div
-                className={`timeline-content ${isLeft ? "left" : "right"}`}
-                initial={{ x: isLeft ? -200 : 200, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1.4, type: "spring" }}
-              >
-                <h3>{item.title}</h3>
-                <h4>{item.company}</h4>
-                <p className="timeline-date">{item.date}</p>
-                <ul>
-                  {item.description.map((desc, i) => (
-                    <li key={i}>{desc}</li>
-                  ))}
-                </ul>
-              </motion.div>
-            </div>
-          );
-        })}
+      <div className="exp-container">
+        <div className="exp-title">
+          <span>Work Experience</span>
+        </div>
+
+        <div className="timeline">
+          {experienceData.map((item, index) => {
+            const isLeft = index % 2 === 0;
+            return (
+              <div className="timeline-item" key={item.id}>
+                <div className="timeline-icon">{item.icon}</div>
+                <motion.div
+                  className={`timeline-content ${isLeft ? "left" : "right"}`}
+                  initial={{ x: isLeft ? -200 : 200, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.4, type: "spring" }}
+                >
+                  <h3>{item.title}</h3>
+                  <h4>{item.company}</h4>
+                  <p className="timeline-date">{item.date}</p>
+                  <ul>
+                    {item.description.map((desc, i) => (
+                      <li key={i}>{desc}</li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
