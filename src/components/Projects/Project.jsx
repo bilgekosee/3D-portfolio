@@ -41,7 +41,7 @@ const ProjectItem = [
     img: "./flight.png",
     projectContent:
       "A clone of the Google Flights interface built with React. Allows selecting dates, destinations, and more.",
-    tags: ["react", "css", "api"],
+    tags: ["react", "tailwind", "api"],
   },
   {
     id: "5",
