@@ -1,6 +1,4 @@
 require("dotenv").config();
-console.log("EMAIL_USER:", process.env.EMAIL_USER);
-console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "Var ✅" : "Yok ❌");
 
 const express = require("express");
 const cors = require("cors");
@@ -13,9 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 app.post("/send", async (req, res) => {
-  console.log("📩 /send endpoint hit");
   const { name, email, message } = req.body;
-  console.log("✉️ Email Request:", { name, email, message });
 
   try {
     const transporter = nodemailer.createTransport({
