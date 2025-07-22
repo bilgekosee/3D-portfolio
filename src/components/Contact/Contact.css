@@ -46,9 +46,3 @@ textarea::placeholder {
   justify-content: center;
   margin: auto;
 }
-
-canvas {
-  width: 100% !important;
-  height: 100% !important;
-  display: block;
-}
