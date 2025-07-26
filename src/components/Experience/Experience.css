@@ -85,3 +85,20 @@
   margin-bottom: 8px;
   line-height: 1.5;
 }
+
+.cv-download-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background-color: #61dafb;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.cv-download-btn:hover {
+  background-color: #21a1f1;
+  color: white;
+}

@@ -29,18 +29,18 @@ app.post("/send", async (req, res) => {
       text: message,
     });
 
-    console.log("📨 Mail gönderildi.");
+    console.log("Mail gönderildi.");
     res.status(200).json({ message: "Email sent successfully!" });
   } catch (error) {
-    console.error("⛔ Email gönderme hatası:", error);
+    console.error("Email gönderme hatası:", error);
     res.status(500).json({ message: "Failed to send email." });
   }
 });
 
 app
   .listen(PORT, () => {
-    console.log(`✅ Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
   })
   .on("error", (err) => {
-    console.error("❌ Server error:", err);
+    console.error("Server error:", err);
   });

@@ -4,6 +4,7 @@ import { FaGraduationCap } from "react-icons/fa6";
 import { TbBrandToyota } from "react-icons/tb";
 import { GiAchievement } from "react-icons/gi";
 import { CgWorkAlt } from "react-icons/cg";
+import { PiReadCvLogoBold } from "react-icons/pi";
 import { motion } from "framer-motion";
 
 const experienceData = [
@@ -55,6 +56,13 @@ const experienceData = [
       "Optimized UI/UX components and improved rendering performance.",
     ],
   },
+  {
+    id: 5,
+    title: "CV",
+    icon: <PiReadCvLogoBold size={32} />,
+    description: ["You can download the CV by clicking the button"],
+    cvLink: "/Bilge_Kose_CV.pdf",
+  },
 ];
 
 const Experience = () => {
@@ -79,13 +87,22 @@ const Experience = () => {
                   transition={{ duration: 1.4, type: "spring" }}
                 >
                   <h3>{item.title}</h3>
-                  <h4>{item.company}</h4>
-                  <p className="timeline-date">{item.date}</p>
+
+                  {item.company && <h4>{item.company}</h4>}
+
+                  {item.date && <p className="timeline-date">{item.date}</p>}
+
                   <ul>
                     {item.description.map((desc, i) => (
                       <li key={i}>{desc}</li>
                     ))}
                   </ul>
+
+                  {item.cvLink && (
+                    <a href={item.cvLink} download className="cv-download-btn">
+                      Download CV
+                    </a>
+                  )}
                 </motion.div>
               </div>
             );
