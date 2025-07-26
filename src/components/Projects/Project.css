@@ -108,3 +108,43 @@
 .tag-tailwind {
   background-color: #a2287c;
 }
+
+@media (max-width: 1000px) {
+  .project-card-container {
+    width: 250px;
+    height: 450px;
+  }
+}
+@media (max-width: 890px) {
+  .project-card-container {
+    width: 200px;
+    height: 375px;
+  }
+  .card-img {
+    height: 120px;
+  }
+}
+@media (max-width: 780px) {
+  .project-wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    padding: 10px 22px;
+  }
+  .project-card-container {
+    width: 260px;
+    height: 400px;
+  }
+}
+@media (max-width: 665px) {
+  .project-wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    padding: 10px 22px;
+  }
+  .project-card-container {
+    width: 200px;
+    height: 375px;
+  }
+}

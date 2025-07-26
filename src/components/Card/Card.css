@@ -53,3 +53,21 @@
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
 }
+@media (max-width: 967px) {
+  .skill-card {
+    min-width: 180px;
+    min-height: 270px;
+  }
+  .skills-card-wrapper {
+    font-size: 13px;
+  }
+}
+@media (max-width: 760px) {
+  .skill-card {
+    min-width: 120px;
+    min-height: 210px;
+  }
+  .skills-card-wrapper {
+    font-size: 9px;
+  }
+}
