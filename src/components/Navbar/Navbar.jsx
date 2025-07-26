@@ -44,10 +44,11 @@ const Navbar = () => {
           </Canvas>
         </div>
         <div className="content">
-          <span>About</span>
-          <span>Skills</span>
-          <span>Projects</span>
-          <span>Contact</span>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
     </div>
