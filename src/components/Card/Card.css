@@ -71,3 +71,10 @@
     font-size: 9px;
   }
 }
+@media (max-width: 570px) {
+  .skills-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

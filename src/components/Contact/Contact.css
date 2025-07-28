@@ -46,3 +46,59 @@ textarea::placeholder {
   justify-content: center;
   margin: auto;
 }
+button {
+  height: 50px;
+  background-color: #61dafb;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+}
+@media (max-width: 960px) {
+  .info-container {
+    width: 400px;
+  }
+  .earth {
+    width: 350px;
+    height: 350px;
+  }
+}
+@media (max-width: 790px) {
+  .info-container {
+    width: 350px;
+  }
+  .earth {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (max-width: 690px) {
+  .info-container {
+    width: 275px;
+  }
+  .earth {
+    width: 230px;
+    height: 230px;
+  }
+}
+@media (max-width: 540px) {
+  .info-container {
+    width: 220px;
+    gap: 10px;
+    padding: 30px 10px;
+  }
+  .earth {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (max-width: 445px) {
+  .info-container {
+    width: 175px;
+    gap: 10px;
+    padding: 30px 10px;
+  }
+  .earth {
+    width: 150px;
+    height: 150px;
+  }
+}

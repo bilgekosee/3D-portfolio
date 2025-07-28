@@ -55,3 +55,34 @@
   flex-direction: column;
   text-align: left;
 }
+@media (max-width: 710px) {
+  .lottie-gif {
+    width: 310px;
+  }
+}
+@media (max-width: 650px) {
+  .lottie-gif {
+    width: 270px;
+  }
+  .about-title {
+    font-size: 14px;
+  }
+  .unvan {
+    font-size: 11px;
+  }
+  .about-content {
+    font-size: 13px;
+  }
+  .about-container {
+    gap: 0;
+  }
+}
+@media (max-width: 520px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .content-wrapper {
+    text-align: center;
+  }
+}

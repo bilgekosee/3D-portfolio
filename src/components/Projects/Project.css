@@ -148,3 +148,11 @@
     height: 375px;
   }
 }
+@media (max-width: 530px) {
+  .project-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

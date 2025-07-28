@@ -102,3 +102,34 @@
   background-color: #21a1f1;
   color: white;
 }
+@media (max-width: 530px) {
+  h3 {
+    font-size: 17px;
+  }
+  h4 {
+    font-size: 14px;
+  }
+  .timeline-date {
+    font-size: 12px;
+  }
+  .timeline-content ul {
+    font-size: 13px;
+  }
+}
+@media (max-width: 470px) {
+  h3 {
+    font-size: 15px;
+  }
+  h4 {
+    font-size: 12px;
+  }
+  .timeline-date {
+    font-size: 10px;
+  }
+  .timeline-content ul {
+    font-size: 11px;
+  }
+  .timeline-content {
+    padding: 10px;
+  }
+}

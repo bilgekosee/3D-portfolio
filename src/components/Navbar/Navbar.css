@@ -56,3 +56,32 @@
   width: 100%;
   height: 100%;
 }
+@media (max-width: 745px) {
+  .model-wrapper {
+    width: 150px;
+  }
+}
+@media (max-width: 620px) {
+  .model-wrapper {
+    width: 100px;
+  }
+}
+@media (max-width: 570px) {
+  .model-wrapper {
+    width: 100px;
+  }
+  .content a {
+    font-size: 15px;
+  }
+}
+@media (max-width: 520px) {
+  .model-wrapper {
+    width: 50px;
+  }
+  .content a {
+    font-size: 12px;
+  }
+  .content {
+    gap: 10px;
+  }
+}
