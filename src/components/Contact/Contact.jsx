@@ -2,6 +2,7 @@ import "./Contact.css";
 import EarthModel from "../../Earthmodel";
 import { motion } from "framer-motion";
 import { Suspense, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,12 +11,22 @@ const Contact = () => {
     message: "",
   });
 
+  const { ref: formRef, inView: formInView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+  });
+  const { ref: earthRef, inView: earthInView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+  });
+
   const handleChange = (e) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("form gönderiliyor");
@@ -30,14 +41,14 @@ const Contact = () => {
       });
 
       if (res.ok) {
-        alert("Email sent successfully!");
+        alert("Email sent successfully");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        alert("Failed to send email.");
+        alert("Failed to send email");
       }
     } catch (err) {
       console.error("Error:", err);
-      alert("Something went wrong.");
+      alert("⚠️ Something went wrong");
     }
   };
 
@@ -50,17 +61,17 @@ const Contact = () => {
     >
       <div className="contact-container">
         <motion.form
+          ref={formRef}
           className="info-container"
           onSubmit={handleSubmit}
           initial={{ x: -200, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          animate={formInView ? { x: 0, opacity: 1 } : { x: 0, opacity: 1 }}
           transition={{
-            duration: 2,
+            duration: 1.5,
             ease: "easeInOut",
             delay: 0.2,
             type: "tween",
           }}
-          viewport={{ once: true }}
         >
           <input
             type="text"
@@ -91,16 +102,16 @@ const Contact = () => {
         </motion.form>
 
         <motion.div
+          ref={earthRef}
           className="earth"
           initial={{ x: 200, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
+          animate={earthInView ? { x: 0, opacity: 1 } : { x: 0, opacity: 1 }}
           transition={{
-            duration: 2,
+            duration: 1.5,
             ease: "easeInOut",
             delay: 0.4,
             type: "tween",
           }}
-          viewport={{ once: true }}
         >
           <Suspense fallback={null}>
             <EarthModel />

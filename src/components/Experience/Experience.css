@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 30px;
-  overflow: hidden;
+  overflow: visible;
 }
 .exp-container {
   font-family: "Montserrat", sans-serif;
@@ -102,6 +102,7 @@
   background-color: #21a1f1;
   color: white;
 }
+
 @media (max-width: 530px) {
   h3 {
     font-size: 17px;

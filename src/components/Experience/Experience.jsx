@@ -6,6 +6,7 @@ import { GiAchievement } from "react-icons/gi";
 import { CgWorkAlt } from "react-icons/cg";
 import { PiReadCvLogoBold } from "react-icons/pi";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const experienceData = [
   {
@@ -76,20 +77,25 @@ const Experience = () => {
         <div className="timeline">
           {experienceData.map((item, index) => {
             const isLeft = index % 2 === 0;
+
+            const { ref, inView } = useInView({
+              triggerOnce: true,
+              threshold: 0.1,
+            });
+
             return (
-              <div className="timeline-item" key={item.id}>
+              <div className="timeline-item" key={item.id} ref={ref}>
                 <div className="timeline-icon">{item.icon}</div>
+
                 <motion.div
                   className={`timeline-content ${isLeft ? "left" : "right"}`}
                   initial={{ x: isLeft ? -200 : 200, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  viewport={{ once: true }}
+                  animate={inView ? { x: 0, opacity: 1 } : {}}
                   transition={{ duration: 1.4, type: "spring" }}
                 >
                   <h3>{item.title}</h3>
 
                   {item.company && <h4>{item.company}</h4>}
-
                   {item.date && <p className="timeline-date">{item.date}</p>}
 
                   <ul>

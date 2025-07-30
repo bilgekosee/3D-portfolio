@@ -71,6 +71,7 @@ button {
     height: 300px;
   }
 }
+
 @media (max-width: 690px) {
   .info-container {
     width: 275px;
@@ -100,5 +101,22 @@ button {
   .earth {
     width: 150px;
     height: 150px;
+  }
+}
+
+@media (max-width: 380px) {
+  .info-container {
+    width: 150px;
+    gap: 5px;
+    padding: 10px 10px;
+  }
+  .earth {
+    width: 120px;
+    height: 120px;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    padding-left: 5px;
+    color: #494747;
   }
 }
