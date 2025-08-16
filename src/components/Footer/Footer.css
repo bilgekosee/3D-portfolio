@@ -3,7 +3,8 @@
   grid-template-columns: 1fr 1fr;
   position: relative;
   width: 100%;
-  min-height: 160px;
+  min-height: 90px;
+  padding: 10px;
   overflow: hidden;
   background-color: black;
 }
@@ -65,4 +66,61 @@
 .social-wrapper svg:hover {
   font-size: 60px;
   transform: translateY(-10px);
+}
+@media (max-width: 573px) {
+  .portfolio-info {
+    grid-template-columns: 1fr 1fr;
+  }
+  .social-wrapper svg {
+    font-size: 20px;
+  }
+  .social-wrapper {
+    width: 180px;
+    height: 25px;
+  }
+  .social-wrapper svg:hover {
+    font-size: 40px;
+  }
+}
+@media (max-width: 450px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .portfolio-info {
+    display: flex;
+    gap: 25px;
+  }
+  .social-wrapper svg {
+    font-size: 40px;
+  }
+  .social-wrapper {
+    width: 290px;
+    height: 45px;
+  }
+  .social-wrapper svg:hover {
+    font-size: 70px;
+  }
+}
+@media (max-width: 450px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .portfolio-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .social-wrapper svg {
+    font-size: 20px;
+  }
+  .social-wrapper {
+    width: 180px;
+    height: 25px;
+  }
+  .social-wrapper svg:hover {
+    font-size: 40px;
+  }
 }
