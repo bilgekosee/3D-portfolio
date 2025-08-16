@@ -6,6 +6,7 @@ import Card from "./components/Card/Card";
 import Projects from "./components/Projects/Project";
 import Experience from "./components/Experience/Experience";
 import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Projects />
       <Experience />
       <Contact />
+      <Footer />
     </>
   );
 }
