@@ -5,9 +5,14 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 
 const app = express();
-const PORT = 5001;
+const PORT = process.env.PORT || 5001;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://bilge-kose-portfolio.netlify.app",
+    methods: ["POST"],
+  })
+);
 app.use(express.json());
 
 app.post("/send", async (req, res) => {
