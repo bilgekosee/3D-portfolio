@@ -32,13 +32,16 @@ const Contact = () => {
     console.log("form gönderiliyor");
 
     try {
-      const res = await fetch("http://localhost:5001/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const res = await fetch(
+        "https://threed-portfolio-htrn.onrender.com/send",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (res.ok) {
         alert("Email sent successfully");
