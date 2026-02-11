@@ -72,7 +72,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://bilge-koose.netlify.app/"
+            href="https://bilge-k0see.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
